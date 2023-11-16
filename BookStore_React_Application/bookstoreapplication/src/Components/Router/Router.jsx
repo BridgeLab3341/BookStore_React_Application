@@ -8,7 +8,7 @@ return(
     <div>
         <BrowserRouter>
           <Routes>
-             <Route exact path={"/signin"} element={<SignIn/>}></Route>
+             <Route exact path={"/"} element={<SignIn/>}></Route>
              <Route exact path={"/signup"} element={<SignUp/>} ></Route>
           </Routes>
         </BrowserRouter>
