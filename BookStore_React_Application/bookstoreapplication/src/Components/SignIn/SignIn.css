@@ -6,6 +6,7 @@
     height: 100vh;
     background-color: rgb(206, 201, 201);
 }
+
 .main {
     display: flex;
     flex-direction: row;
@@ -14,10 +15,11 @@
     width: 80%;
     height: 50%;
 }
+
 .leftpart {
     border: 0px solid rgba(211, 206, 206, 0.5);
     width: 31%;
-    height: 120%;
+    height: 90%;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -26,69 +28,79 @@
     background-color: white;
     box-shadow: 1px 1px 2px 2px rgb(195, 194, 194);
 }
+
 img {
     position: relative;
     left: 15%;
     top: 5%;
-    width:70%;
+    width:30%;
     display: flex;
     justify-content:center;
     align-items: center;
     border-radius: 200px;
 }
+
 .rightpart {
     border: 1px solid rgba(198, 194, 194, 0.5);
     background-color: white;
     position: relative;
     right: 3%;
-    width: 38%;
+    width: 41%;
     height: 140%;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-content: center;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     box-shadow: 1px 1px 2px 2px rgb(201, 198, 198);
 }
+
 .buttons {
     width: 55%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     top: 1%;
-    padding: 6px;
+    padding: 1px;
 }
+
 button.signIn {
     width: 50px;
     height: 34px;
 }
+
 button.signUp {
     width: 55px;
     height: 34px;
 }
-.flogin{
+
+.flogin {
     color: black;
 }
+
 .log-email {
-    width: 99%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    padding: 18px;
+    padding: 1px;
     margin: 1px 1px 1px 1px;
 }
+
 .log-pass {
-    width: 99%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    padding: 18px;
+    padding-bottom: 1px;
     margin: 1px 1px 1px 1px;
 }
+
 .button-sin {
     width: 70%;
     display: flex;
@@ -96,53 +108,68 @@ button.signUp {
     align-content: center;
     justify-content: center;
     align-items: center;
-    padding: 18%;
+    padding: 1%;
 }
+
 .or {
     display: flex;
     flex-direction: row;
     align-content: center;
     justify-content: center;
     align-items: center;
-    padding: 1%;
+    padding-bottom: 1%;
 }
+
 .option {
     width: 89%;
-    height: 18%;
+    height: 12%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 10%;
 }
+
 .button {
     border: none;
     color: white;
-    padding: 12px 12px; 
+    padding: 12px 12px;
     text-align: center;
     display: inline-block;
     font-size: 15px;
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
-  }
-  .button1 {
-    background-color: white; 
-    color: black; 
+}
+
+.button1 {
+    background-color: white;
+    color: black;
     border: 2px solid #04AA6D;
-  }
-  
-  .button1:hover {
+}
+
+.button1:hover {
     background-color: #04AA6D;
     color: white;
-  }
-  .button2 {
-    background-color: white; 
-    color: black; 
+}
+
+.button2 {
+    background-color: white;
+    color: black;
     border: 2px solid #008CBA;
-  }
-  
-  .button2:hover {
+}
+
+.button2:hover {
     background-color: #008CBA;
     color: white;
-  }
+}
+.forgot {
+    width: 61%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    padding-left: 40px;
+    padding-bottom: 1px;
+}
