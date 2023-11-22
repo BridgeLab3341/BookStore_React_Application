@@ -12,6 +12,7 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import '../Header/Header.css';
 import { useState } from 'react';
 import { Menu, MenuItem } from '@mui/material';
+import { useNavigate } from 'react-router';
 
 export default function SearchBar() {
     const Search = styled('div')(({ theme }) => ({
@@ -65,12 +66,15 @@ export default function SearchBar() {
         setProfile(null);
     }
 
-    // const handleLogOut=(e)=>{
-    //     if(localStorage.key){
-    //         localStorage.removeItem('token');
-    //     }
-    // }
+    const navigate=useNavigate();
 
+    const handleLogOut=()=>{
+        if(localStorage.key){
+            localStorage.removeItem('Token');
+            navigate("/")
+        }
+    }
+    
     return (
         <div>
             <AppBar position="relative" style={{height:'57px', backgroundColor:'brown'}} >
@@ -143,7 +147,7 @@ export default function SearchBar() {
                          onClose={handlemenuClose}
                         >
                             <MenuItem onClick={handlemenuClose}>Profile</MenuItem>
-                            <MenuItem >Logout</MenuItem>
+                            <MenuItem onClick={handleLogOut} >Logout</MenuItem>
                         </Menu>
                     </div>
                     <div className='cart'>

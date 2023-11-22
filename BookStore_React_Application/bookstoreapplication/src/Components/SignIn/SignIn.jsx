@@ -4,6 +4,7 @@ import './SignIn.css'
 import { Button, TextField } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Login } from "../Services/UserServices";
+import {useNavigate } from "react-router-dom";
 const validEmail = new RegExp('^[a-zA-Z0-9._:$!%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]$');
 const validPassword = new RegExp('^(?=.*?[A-Za-z])(?=.*?[0-9]).{8,}$');
 
@@ -11,6 +12,8 @@ const validPassword = new RegExp('^(?=.*?[A-Za-z])(?=.*?[0-9]).{8,}$');
 export default function SignIn() {
 
     const [logindata, setLoginData] = useState({ email: '', password: '' });
+    const navigate=useNavigate();
+
     const handleEmail = (e) => {
         setLoginData(prevState => (
             {
@@ -52,6 +55,7 @@ export default function SignIn() {
                 console.log("success")
                 console.log(response.data)
                 localStorage.setItem("Token",response.data.data.token)
+                navigate("/dashboard");
             })
             .catch((error)=>{
                 console.log(error);

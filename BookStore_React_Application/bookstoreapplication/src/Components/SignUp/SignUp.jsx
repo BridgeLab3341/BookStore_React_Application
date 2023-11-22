@@ -141,7 +141,7 @@ export default function SignUp() {
                         <TextField className="passw" id="phone" label="password" onChange={handlePassword} error={validateObj.passBorder} helperText={validateObj.passHelper} variant="outlined" size="small" required />
                     </div>
                     <div className="button-sin">
-                        <Button type="submit" className="flogin" onClick={verifySignUpData}>SignUp</Button>
+                        <Button href="/dashboard" type="submit" className="flogin" onClick={verifySignUpData}>SignUp</Button>
                     </div>
                 </div>
             </div>
