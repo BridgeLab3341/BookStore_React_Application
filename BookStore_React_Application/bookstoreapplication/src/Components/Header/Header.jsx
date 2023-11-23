@@ -155,21 +155,21 @@ export default function SearchBar() {
                                     open={Boolean(profile)}
                                     onClose={handlemenuClose}
                                 >
-                                    <div style={{width:'200px', display: 'flex',flexDirection:'column', justifyContent:'flex-start',alignItems:'flex-start',alignContent:'flex-start'}}>
+                                    <div style={{ width: '200px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', alignContent: 'flex-start' }}>
                                         <div className='name'>
                                             <MenuItem style={{ width: '190px', display: 'flex', justifyContent: 'center' }}><b>Hello,name</b></MenuItem>
                                         </div>
                                         <div className='profi'>
-                                            <MenuItem onClick={handlemenuClose} style={{color:'grey', width: '160px', display: 'flex', justifyContent: 'center', paddingLeft:'-10px' }}><PermIdentityOutlinedIcon />Profile</MenuItem>
+                                            <MenuItem onClick={handlemenuClose} style={{ color: 'grey', width: '160px', display: 'flex', justifyContent: 'center', paddingLeft: '-10px' }}><PermIdentityOutlinedIcon />Profile</MenuItem>
                                         </div>
                                         <div className='order'>
-                                            <MenuItem style={{color:'grey', width: '190px', display: 'flex', justifyContent: 'center',  }}><MarkunreadMailboxOutlinedIcon />My Orders</MenuItem>
+                                            <MenuItem style={{ color: 'grey', width: '190px', display: 'flex', justifyContent: 'center', }}><MarkunreadMailboxOutlinedIcon />My Orders</MenuItem>
                                         </div>
                                         <div>
-                                            <MenuItem style={{color:'grey', width: '200px', display: 'flex', justifyContent: 'center', paddingLeft:'15px' }} ><FavoriteBorderOutlinedIcon />My WishList</MenuItem>
+                                            <MenuItem style={{ color: 'grey', width: '200px', display: 'flex', justifyContent: 'center', paddingLeft: '15px' }} ><FavoriteBorderOutlinedIcon />My WishList</MenuItem>
                                         </div>
-                                        <div className='logout' style={{paddingLeft:'32px'}}>
-                                            <MenuItem onClick={handleLogOut} style={{color:'brown', border: '1px solid brown', borderRadius: '4px', width: '130px', display: 'flex', justifyContent: 'center', alignContent: 'center', borderWidth: '2px 2px 2px 2px', paddingLeft: '10px' }}>Logout</MenuItem>
+                                        <div className='logout' style={{ paddingLeft: '32px' }}>
+                                            <MenuItem onClick={handleLogOut} style={{ color: 'brown', border: '1px solid brown', borderRadius: '4px', width: '130px', display: 'flex', justifyContent: 'center', alignContent: 'center', borderWidth: '2px 2px 2px 2px', paddingLeft: '10px' }}>Logout</MenuItem>
                                         </div>
                                     </div>
                                 </Menu>
@@ -212,14 +212,14 @@ export default function SearchBar() {
                                 >
                                     <div className='message' style={{ width: '340px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', flexWrap: 'nowrap', letterSpacing: '1px', wordSpacing: '1px' }}>
                                         <h4 style={{ height: '1px', paddingLeft: '14px' }}>Welcome</h4>
-                                        <p style={{color:'grey', paddingLeft: '14px' }}>To access account and manage Orders</p>
-                                        <div style={{color:'brown' ,display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', alignContent: 'center', alignItems: 'center', paddingLeft: '14px', paddingBottom: '5px' }}>
+                                        <p style={{ color: 'grey', paddingLeft: '14px' }}>To access account and manage Orders</p>
+                                        <div style={{ color: 'brown', display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', alignContent: 'center', alignItems: 'center', paddingLeft: '14px', paddingBottom: '5px' }}>
                                             <MenuItem onClick={() => navigate('/')} style={{ border: '2px solid brown', borderRadius: '4px', width: '69px', height: '30px', borderWidth: '2px 2px 2px 2px', paddingLeft: '10px' }}>LOGIN</MenuItem>/<MenuItem onClick={() => navigate('/signup')} style={{ border: '2px solid brown', borderRadius: '4px', width: '79px', height: '30px', borderWidth: '2px 2px 2px 2px', paddingLeft: '10px' }}>SIGNUP</MenuItem>
                                         </div>
-                                        <div style={{borderTop: '1px solid #ccc', margin: '8px 0', width: '340px' }}></div>
+                                        <div style={{ borderTop: '1px solid #ccc', margin: '8px 0', width: '340px' }}></div>
                                         <div >
-                                            <MenuItem style={{color:'grey', width: '190px', display: 'flex', justifyContent: 'center', letterSpacing: '1px', wordSpacing: '1px' }}><MarkunreadMailboxOutlinedIcon />My Orders</MenuItem>
-                                            <MenuItem style={{color:'grey', width: '200px', display: 'flex', justifyContent: 'center', letterSpacing: '1px', wordSpacing: '1px' }} ><FavoriteBorderOutlinedIcon />My WishList</MenuItem>
+                                            <MenuItem style={{ color: 'grey', width: '190px', display: 'flex', justifyContent: 'center', letterSpacing: '1px', wordSpacing: '1px' }}><MarkunreadMailboxOutlinedIcon />My Orders</MenuItem>
+                                            <MenuItem style={{ color: 'grey', width: '200px', display: 'flex', justifyContent: 'center', letterSpacing: '1px', wordSpacing: '1px' }} ><FavoriteBorderOutlinedIcon />My WishList</MenuItem>
                                         </div>
                                     </div>
                                 </Menu>
