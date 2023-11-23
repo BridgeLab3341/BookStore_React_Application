@@ -13,6 +13,9 @@ import '../Header/Header.css';
 import { useState } from 'react';
 import { Menu, MenuItem } from '@mui/material';
 import { useNavigate } from 'react-router';
+import MarkunreadMailboxOutlinedIcon from '@mui/icons-material/MarkunreadMailboxOutlined';
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import Divider from '@mui/material/Divider';
 
 export default function SearchBar() {
     const Search = styled('div')(({ theme }) => ({
@@ -56,111 +59,184 @@ export default function SearchBar() {
         },
     }));
 
-    const[profile,setProfile]=useState(null);
+    const [profile, setProfile] = useState(null);
 
-    const handleMenuClick=(e)=>{
+    const handleMenuClick = (e) => {
         setProfile(e.currentTarget);
         console.log("Click");
     }
-    const handlemenuClose=(e)=>{
+    const handlemenuClose = (e) => {
         setProfile(null);
     }
 
-    const navigate=useNavigate();
+    const navigate = useNavigate();
 
-    const handleLogOut=()=>{
-        if(localStorage.key){
+    const handleLogOut = () => {
+        if (localStorage.key) {
             localStorage.removeItem('Token');
-            navigate("/")
+            navigate("/dashboard")
         }
     }
-    
+
+
     return (
         <div>
-            <AppBar position="relative" style={{height:'57px', backgroundColor:'brown'}} >
+            <AppBar position="relative" style={{ height: '57px', backgroundColor: 'brown' }} >
                 <Toolbar className='bar'>
                     <div>
-                    <img src={Logo} alt='BookLogo' style={{width:'35px', display:'flex', justifyContent:'center', padding:'23px 23px 33px 23px'}}></img>
+                        <img src={Logo} alt='BookLogo' style={{ width: '35px', display: 'flex', justifyContent: 'center', padding: '23px 23px 33px 23px' }}></img>
                     </div>
                     <div className='home-icon'>
                         <Typography
-                          variant='h7'
-                          style={{
-                            flexGrow:1,
-                            display:'flex',
-                            height:'35px',
-                            padding:'23px 23px 53px 8px'
-                          }}
+                            variant='h7'
+                            style={{
+                                flexGrow: 1,
+                                display: 'flex',
+                                height: '35px',
+                                padding: '23px 23px 53px 8px'
+                            }}
                         >
-                        <p>BookStore</p>
+                            <p>BookStore</p>
                         </Typography>
                     </div>
-                    <div className='searchBar' style={{height:'53%', backgroundColor:'white',display:'flex',justifyContent:'center', alignContent:'center',alignItems:'center',borderRadius:'5px'}}>
+                    <div className='searchBar' style={{ height: '53%', backgroundColor: 'white', display: 'flex', justifyContent: 'center', alignContent: 'center', alignItems: 'center', borderRadius: '5px' }}>
                         <search >
-                        <SearchIconWrapper>
-                            <SearchIcon style={{color:'grey',display:'flex',justifyContent:'center', alignContent:'center',alignItems:'center',paddingBottom:'17px'}}/>
-                        </SearchIconWrapper>
-                        <StyledInputBase
-                          placeholder='Search...'
-                          color='grey'
-                          inputProps={{ 'aria-label': 'search' }}
-                          sx={{
-                              justifyItems: 'center',
-                              alignContent: 'center',
-                              color: 'grey',
-                              paddingRight: '99px',
-                              height:'10%',
-                              }}
-                        ></StyledInputBase>
+                            <SearchIconWrapper>
+                                <SearchIcon style={{ color: 'grey', display: 'flex', justifyContent: 'center', alignContent: 'center', alignItems: 'center', paddingBottom: '17px' }} />
+                            </SearchIconWrapper>
+                            <StyledInputBase
+                                placeholder='Search...'
+                                color='grey'
+                                inputProps={{ 'aria-label': 'search' }}
+                                style={{
+                                    justifyItems: 'center',
+                                    alignContent: 'center',
+                                    color: 'grey',
+                                    paddingRight: '99px',
+                                    height: '10%',
+                                }}
+                            ></StyledInputBase>
                         </search>
                     </div>
-                    <div className='account'>
-                        <IconButton
-                          size='small'
-                          aria-label='account of current user'
-                          aria-controls='menu-appbar'
-                          aria-haspopup='true'
-                         style={{
-                            color:'white',
-                            display:'flex',
-                            flexWrap:'wrap',
-                            flexDirection:'column',
-                         }}
-                         onClick={handleMenuClick}
-                        >
-                            <PermIdentityOutlinedIcon/>
-                            profile
-                        </IconButton>
-                        <Menu
-                         id='menu-appbar'
-                         profile={profile}
-                         anchorOrigin={{
-                            vertical:'top',
-                            horizontal:'right'
-                         }}
-                         keepMounted
-                         transformOrigin={{
-                            vertical:'bottom',
-                            horizontal:'right',
-                         }}
-                         open={Boolean(profile)}
-                         onClose={handlemenuClose}
-                        >
-                            <MenuItem onClick={handlemenuClose}>Profile</MenuItem>
-                            <MenuItem onClick={handleLogOut} >Logout</MenuItem>
-                        </Menu>
+                    <div className='account'  >
+                        {localStorage.getItem('Token') ? (
+                            <div >
+                                <IconButton
+                                    size='small'
+                                    aria-label='account of current user'
+                                    aria-controls='primary-search-account-menu'
+                                    aria-haspopup='true'
+                                    color='inherit'
+                                    style={{
+                                        display: 'flex',
+                                        flexWrap: 'wrap',
+                                        flexDirection: 'column',
+                                    }}
+                                    onClick={handleMenuClick}
+                                >
+                                    <PermIdentityOutlinedIcon />
+                                    profile
+                                </IconButton>
+                                <Menu className='menu-item'
+                                    id='menu-appbar'
+                                    profile={profile}
+                                    anchorOrigin={{
+                                        vertical: 'top',
+                                        horizontal: 'right',
+                                        position: 'relative',
+                                    }}
+                                    keepMounted
+                                    transformOrigin={{
+                                        vertical: 'top',
+                                        horizontal: 'right',
+                                    }}
+
+                                    style={{ top: '6vh', left: '-12vw', paddingLeft: '10px', marginLeft: '1px', margin: '1px' }}
+                                    open={Boolean(profile)}
+                                    onClose={handlemenuClose}
+                                >
+                                    <div style={{width:'200px', display: 'flex',flexDirection:'column', justifyContent:'flex-start',alignItems:'flex-start',alignContent:'flex-start'}}>
+                                        <div className='name'>
+                                            <MenuItem style={{ width: '190px', display: 'flex', justifyContent: 'center' }}><b>Hello,name</b></MenuItem>
+                                        </div>
+                                        <div className='profi'>
+                                            <MenuItem onClick={handlemenuClose} style={{color:'grey', width: '160px', display: 'flex', justifyContent: 'center', paddingLeft:'-10px' }}><PermIdentityOutlinedIcon />Profile</MenuItem>
+                                        </div>
+                                        <div className='order'>
+                                            <MenuItem style={{color:'grey', width: '190px', display: 'flex', justifyContent: 'center',  }}><MarkunreadMailboxOutlinedIcon />My Orders</MenuItem>
+                                        </div>
+                                        <div>
+                                            <MenuItem style={{color:'grey', width: '200px', display: 'flex', justifyContent: 'center', paddingLeft:'15px' }} ><FavoriteBorderOutlinedIcon />My WishList</MenuItem>
+                                        </div>
+                                        <div className='logout' style={{paddingLeft:'32px'}}>
+                                            <MenuItem onClick={handleLogOut} style={{color:'brown', border: '1px solid brown', borderRadius: '4px', width: '130px', display: 'flex', justifyContent: 'center', alignContent: 'center', borderWidth: '2px 2px 2px 2px', paddingLeft: '10px' }}>Logout</MenuItem>
+                                        </div>
+                                    </div>
+                                </Menu>
+                            </div>
+                        ) : (
+                            <div>
+                                <IconButton
+                                    size='small'
+                                    aria-label='account of current user'
+                                    aria-controls='primary-search-account-menu'
+                                    aria-haspopup='true'
+                                    color='inherit'
+                                    style={{
+                                        display: 'flex',
+                                        flexWrap: 'wrap',
+                                        flexDirection: 'column',
+                                    }}
+                                    onClick={handleMenuClick}
+                                >
+                                    <PermIdentityOutlinedIcon />
+                                    profile
+                                </IconButton>
+                                <Menu
+                                    id='menu-appbar'
+                                    profile={profile}
+                                    anchorOrigin={{
+                                        vertical: 'top',
+                                        horizontal: 'right',
+                                        position: 'relative',
+                                    }}
+                                    keepMounted
+                                    transformOrigin={{
+                                        vertical: 'top',
+                                        horizontal: 'right',
+                                    }}
+
+                                    style={{ top: '6vh', left: '-7vw', paddingLeft: '10px', marginLeft: '1px', margin: '1px' }}
+                                    open={Boolean(profile)}
+                                    onClose={handlemenuClose}
+                                >
+                                    <div className='message' style={{ width: '340px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', flexWrap: 'nowrap', letterSpacing: '1px', wordSpacing: '1px' }}>
+                                        <h4 style={{ height: '1px', paddingLeft: '14px' }}>Welcome</h4>
+                                        <p style={{color:'grey', paddingLeft: '14px' }}>To access account and manage Orders</p>
+                                        <div style={{color:'brown' ,display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', alignContent: 'center', alignItems: 'center', paddingLeft: '14px', paddingBottom: '5px' }}>
+                                            <MenuItem onClick={() => navigate('/')} style={{ border: '2px solid brown', borderRadius: '4px', width: '69px', height: '30px', borderWidth: '2px 2px 2px 2px', paddingLeft: '10px' }}>LOGIN</MenuItem>/<MenuItem onClick={() => navigate('/signup')} style={{ border: '2px solid brown', borderRadius: '4px', width: '79px', height: '30px', borderWidth: '2px 2px 2px 2px', paddingLeft: '10px' }}>SIGNUP</MenuItem>
+                                        </div>
+                                        <div style={{borderTop: '1px solid #ccc', margin: '8px 0', width: '340px' }}></div>
+                                        <div >
+                                            <MenuItem style={{color:'grey', width: '190px', display: 'flex', justifyContent: 'center', letterSpacing: '1px', wordSpacing: '1px' }}><MarkunreadMailboxOutlinedIcon />My Orders</MenuItem>
+                                            <MenuItem style={{color:'grey', width: '200px', display: 'flex', justifyContent: 'center', letterSpacing: '1px', wordSpacing: '1px' }} ><FavoriteBorderOutlinedIcon />My WishList</MenuItem>
+                                        </div>
+                                    </div>
+                                </Menu>
+                            </div>
+                        )}
                     </div>
                     <div className='cart'>
                         <IconButton
-                         size='small'
-                         style={{
-                            color:'white',
-                            display:'flex',
-                            flexDirection:'wrap',
-                            flexDirection:'column'
-                         }}
+                            size='small'
+                            style={{
+                                color: 'white',
+                                display: 'flex',
+                                flexDirection: 'wrap',
+                                flexDirection: 'column'
+                            }}
                         >
-                            <ShoppingCartOutlinedIcon/>
+                            <ShoppingCartOutlinedIcon />
                             cart
                         </IconButton>
                     </div>
