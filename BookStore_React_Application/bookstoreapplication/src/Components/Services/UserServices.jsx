@@ -17,3 +17,9 @@ export const CustomerRegistration=async(obj)=>{
     console.log("Customer Signup api",response);
     return response;
 }
+
+export const FetchAllBooks=async()=>{
+    let response=await axios.post("https://localhost:44334/api/Product/GetAllBooks");
+    console.log("Fetched All Books",response);
+    return response;
+}

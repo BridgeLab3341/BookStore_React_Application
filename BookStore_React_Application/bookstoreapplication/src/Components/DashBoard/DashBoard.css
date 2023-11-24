@@ -1,0 +1,18 @@
+.all-books {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    width: 1100px;
+    padding: 50px
+}
+.items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 67px;
+}

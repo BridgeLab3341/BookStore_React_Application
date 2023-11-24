@@ -15,7 +15,6 @@ import { Menu, MenuItem } from '@mui/material';
 import { useNavigate } from 'react-router';
 import MarkunreadMailboxOutlinedIcon from '@mui/icons-material/MarkunreadMailboxOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
-import Divider from '@mui/material/Divider';
 
 export default function SearchBar() {
     const Search = styled('div')(({ theme }) => ({
@@ -102,17 +101,18 @@ export default function SearchBar() {
                     <div className='searchBar' style={{ height: '53%', backgroundColor: 'white', display: 'flex', justifyContent: 'center', alignContent: 'center', alignItems: 'center', borderRadius: '5px' }}>
                         <search >
                             <SearchIconWrapper>
-                                <SearchIcon style={{ color: 'grey', display: 'flex', justifyContent: 'center', alignContent: 'center', alignItems: 'center', paddingBottom: '17px' }} />
+                                <SearchIcon style={{ color: 'grey', display: 'flex', justifyContent: 'center', alignContent: 'center', alignItems: 'center', paddingBottom: '17px',paddingLeft:'10px'}} />
                             </SearchIconWrapper>
                             <StyledInputBase
                                 placeholder='Search...'
                                 color='grey'
+                                
                                 inputProps={{ 'aria-label': 'search' }}
                                 style={{
                                     justifyItems: 'center',
                                     alignContent: 'center',
                                     color: 'grey',
-                                    paddingRight: '99px',
+                                    paddingRight: '1px',
                                     height: '10%',
                                 }}
                             ></StyledInputBase>
@@ -151,7 +151,7 @@ export default function SearchBar() {
                                         horizontal: 'right',
                                     }}
 
-                                    style={{ top: '6vh', left: '-12vw', paddingLeft: '10px', marginLeft: '1px', margin: '1px' }}
+                                    style={{ top: '6vh', left: '-12vw', paddingLeft: '1px', marginLeft: '1px', margin: '1px' }}
                                     open={Boolean(profile)}
                                     onClose={handlemenuClose}
                                 >

@@ -10,6 +10,7 @@ img {
     height: 107px;
 }
 .searchBar {
+    position: 'relative';
     height: 58%;
     background-color: white;
     display: flex;
@@ -18,6 +19,7 @@ img {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
+    width: 520px;
 }
 .account {
     width: 84px;
