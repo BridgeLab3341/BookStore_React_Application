@@ -3,6 +3,7 @@ import SearchBar from "../Header/Header";
 import BookList from "./BookList/BookList";
 import { FetchAllBooks } from "../Services/UserServices";
 import '../DashBoard/DashBoard.css'
+import BookDetails from "./BookDetails/BookDetails";
 
 
 export default function DashBoard() {
@@ -24,10 +25,13 @@ export default function DashBoard() {
                 <h4>Books</h4>
                 <div><p>(3 items)</p></div>
             </div>
-            <div className="all-books">
+            {/* <div className="all-books">
                 {
                     posts.map((data) => (<BookList key={data.id} data={data} props={GetAllBooks} />))
                 }
+            </div> */}
+            <div>
+                <BookDetails/>
             </div>
         </div>
     )

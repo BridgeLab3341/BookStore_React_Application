@@ -1,0 +1,82 @@
+.img-btn {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    width: 39vw;
+    height: 67vh;
+}
+.book-image {
+    border: 2px solid #e3dfdf;
+    width: 31vw;
+    height: 51vh;
+}
+.book {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    width: 100vw;
+    height: 96vh;
+    justify-content: center;
+}
+.buttons {
+    width: 57%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-top: 31px;
+}
+.b-data {
+    width: 52vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.rate {
+    border: 2px solid green;
+    width: 32px;
+    height: 19px;
+    color: white;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border-radius: 3px;
+    font-size: 11px;
+    padding-left: 5px;
+}
+.prce {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.ov-ra {
+    border: 2px solid lightgrey;
+    width: 52vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: rgb(245, 245, 245);
+    border-radius: 4px;
+}
+.write-r {
+    padding-left: 68px;
+    width: 80%;
+    height: 42%;
+    display: flex;
+}
+.sbm {
+    padding-left: 73%;
+    padding-top: 12px;
+}

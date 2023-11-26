@@ -23,3 +23,9 @@ export const FetchAllBooks=async()=>{
     console.log("Fetched All Books",response);
     return response;
 }
+
+export const FetchBookById=async()=>{
+    let response=axios.post("");
+    console.log("",response);
+    return response;
+}
