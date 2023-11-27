@@ -1,12 +1,11 @@
 .all-books {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
     justify-content: flex-start;
-    align-items: center;
-    width: 1100px;
-    padding: 50px
+    flex-wrap: wrap;
+    width: 80%;
+    align-content: center;
+    padding-left: 160px;
 }
 .items {
     display: flex;
@@ -14,5 +13,5 @@
     flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: center;
-    padding-left: 67px;
+    padding-left: 179px;
 }

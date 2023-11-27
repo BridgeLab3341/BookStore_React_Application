@@ -6,9 +6,13 @@ import Star from '@mui/icons-material/Star';
 import StarBorderOutlinedIcon from '@mui/icons-material/StarBorderOutlined';
 
 
-export default function BookDetails() {
+export default function BookDetails(data) {
+
+    // const { author, bookName, descrption, discountprice, image, language, price, quantity, status } = book;
+
     return (
         <div className="book">
+            
             <div className="img-btn">
                 <div className="book-image" left='18%'>
                     <img src={Book} style={{ width: '20vw', height: '45vh', left: '18%' }}></img>
@@ -20,7 +24,7 @@ export default function BookDetails() {
             </div>
             <div className="b-data">
                 <div style={{ paddingBottom: '3px' }}>
-                    <b>Book Name</b>
+                    <b>{data.name}</b>
                 </div>
                 <div style={{ paddingBottom: '4px' }}>Author</div>
                 <div className='rate'>
@@ -41,15 +45,15 @@ export default function BookDetails() {
                     Customer Feedback
                 </div>
                 <div className="ov-ra">
-                    <p style={{ paddingLeft: '4px',display:'flex',alignItems:'flex-start',paddingRight:'412px' }}>Overall rating</p>
-                    <div className="fb" style={{ }}>
+                    <p style={{ paddingLeft: '4px', display: 'flex', alignItems: 'flex-start', paddingRight: '412px' }}>Overall rating</p>
+                    <div className="fb" style={{}}>
                         <StarBorderOutlinedIcon /><StarBorderOutlinedIcon /><StarBorderOutlinedIcon /><StarBorderOutlinedIcon /><StarBorderOutlinedIcon />
                     </div>
                     <div className="write-r">
-                        <div style={{border:'2px solid white', backgroundColor:'white',width:'90%',paddingRight:'15px',borderRadius:'10px',color:'grey'}}>Write Your Review</div>
+                        <div style={{ border: '2px solid white', backgroundColor: 'white', width: '90%', paddingRight: '15px', borderRadius: '10px', color: 'grey' }}>Write Your Review</div>
                     </div>
                     <div className="sbm">
-                        <button style={{backgroundColor:'#4FC3F7',borderRadius:'9%',width:'120%',height:'110%'}}>Submit</button>
+                        <button style={{ backgroundColor: '#4FC3F7', borderRadius: '9%', width: '120%', height: '110%' }}>Submit</button>
                     </div>
                 </div>
             </div>

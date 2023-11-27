@@ -24,8 +24,9 @@ export const FetchAllBooks=async()=>{
     return response;
 }
 
-export const FetchBookById=async()=>{
-    let response=axios.post("");
-    console.log("",response);
+export const FetchBookById=async(obj)=>{
+    let response=axios.post(`https://localhost:44334/api/Product/GetById?productId=${obj.productId}`);
+    console.log("fetch");
+    console.log("Fetched Product by Id",response);
     return response;
 }

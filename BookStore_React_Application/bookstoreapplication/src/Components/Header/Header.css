@@ -10,7 +10,7 @@ img {
     height: 107px;
 }
 .searchBar {
-    position: 'relative';
+    position: 'sticky';
     height: 58%;
     background-color: white;
     display: flex;
@@ -19,7 +19,7 @@ img {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
-    width: 520px;
+    width: 30%;
 }
 .account {
     width: 84px;
@@ -27,7 +27,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-left: 160px;
+    padding-left: 100px;
 }
 .cart {
     width: 48px;

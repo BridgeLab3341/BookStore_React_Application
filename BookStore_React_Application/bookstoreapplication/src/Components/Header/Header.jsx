@@ -80,7 +80,7 @@ export default function SearchBar() {
 
     return (
         <div>
-            <AppBar position="relative" style={{ height: '57px', backgroundColor: 'brown' }} >
+            <AppBar position="relative" style={{ height: '65px', width: '100%', backgroundColor: 'brown', paddingLeft: '100px' }} >
                 <Toolbar className='bar'>
                     <div>
                         <img src={Logo} alt='BookLogo' style={{ width: '35px', display: 'flex', justifyContent: 'center', padding: '23px 23px 33px 23px' }}></img>
@@ -98,21 +98,21 @@ export default function SearchBar() {
                             <p>BookStore</p>
                         </Typography>
                     </div>
-                    <div className='searchBar' style={{ height: '53%', backgroundColor: 'white', display: 'flex', justifyContent: 'center', alignContent: 'center', alignItems: 'center', borderRadius: '5px' }}>
+                    <div className='searchBar' style={{ height: '53%', backgroundColor: 'white', display: 'flex', justifyContent: 'center', alignContent: 'center', alignItems: 'center', borderRadius: '5px', width: '40%' }}>
                         <search >
                             <SearchIconWrapper>
-                                <SearchIcon style={{ color: 'grey', display: 'flex', justifyContent: 'center', alignContent: 'center', alignItems: 'center', paddingBottom: '17px',paddingLeft:'10px'}} />
+                                <SearchIcon style={{ color: 'grey', display: 'flex', justifyContent: 'center', alignContent: 'center', alignItems: 'center', paddingBottom: '17px', paddingLeft: '16px' }} />
                             </SearchIconWrapper>
                             <StyledInputBase
                                 placeholder='Search...'
                                 color='grey'
-                                
+
                                 inputProps={{ 'aria-label': 'search' }}
                                 style={{
                                     justifyItems: 'center',
                                     alignContent: 'center',
                                     color: 'grey',
-                                    paddingRight: '1px',
+                                    paddingLeft: '1px',
                                     height: '10%',
                                 }}
                             ></StyledInputBase>

@@ -8,6 +8,11 @@ import BookDetails from "./BookDetails/BookDetails";
 
 export default function DashBoard() {
 
+    const [toggle,setToggle]=useState(true);
+    
+    const handleToggle=()=>{
+        setToggle(!toggle);
+    }
     const [posts, setposts] = useState([]);
 
     const GetAllBooks = async () => {
@@ -18,6 +23,20 @@ export default function DashBoard() {
     useEffect(() => {
         GetAllBooks()
     }, [])
+
+
+    const [book,setBook]=useState([]);
+
+    const FetchBookById=async()=>{
+        let response=await FetchBookById();
+        console.log("Fetch By Id")
+        console.log(response.data.data)
+        setBook(response.data.data)
+    }
+    // useEffect(()=>{
+    //     FetchBookById()
+    // },[])
+
     return (
         <div>
             <SearchBar />
@@ -25,13 +44,10 @@ export default function DashBoard() {
                 <h4>Books</h4>
                 <div><p>(3 items)</p></div>
             </div>
-            {/* <div className="all-books">
+            <div className="all-books">
                 {
                     posts.map((data) => (<BookList key={data.id} data={data} props={GetAllBooks} />))
                 }
-            </div> */}
-            <div>
-                <BookDetails/>
             </div>
         </div>
     )
